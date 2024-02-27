@@ -1,0 +1,20 @@
+; Program to ADD two numbers
+
+.model small          
+.stack 100h           
+.data 
+.code                 
+Main Proc             ; Main procedure starts
+
+    Mov dl,4              ; Move the value 4 into DL register
+    Add dl,3              ; Add 3 to the value in DL register 
+    Mov cl,dl             ; Move the value in DL register to CL register
+    Add dl,48             ; Convert the ASCII value of the result to its corresponding character  
+    Mov ah,2              ; Set AH register to 2 (to use DOS function for displaying a character)
+    Int 21h               
+
+    Mov ah,4ch 
+    INT 21h              
+
+Main endp             ; End of main procedure
+End Main              
