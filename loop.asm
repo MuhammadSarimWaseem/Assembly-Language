@@ -43,7 +43,7 @@ REPEAT:
     ; Perform bitwise AND operation again between binary values 101 and 011
     mov bl, 101b    ; Load binary value 101 into BL
     mov dl, 011b    ; Load binary value 011 into DL
-    and dl, bl      ; Perform bitwise AND operation, store result in DL
+    or dl, bl      ; Perform bitwise AND operation, store result in DL
     add dl, 48      ; Convert result to ASCII ('0' + result)
     
 AGAIN:
