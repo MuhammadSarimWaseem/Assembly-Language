@@ -1,0 +1,30 @@
+DOSSEG
+.MODEL SMALL
+.STACK 100H
+.DATA
+.CODE
+MAIN PROC
+
+    MOV AL,3
+    MOV BL,6
+    MUL BL
+    AAM
+
+    MOV CH,AH
+    MOV CL,AL
+
+    MOV DL,CH
+    ADD DL,48
+    MOV AH,2
+    INT 21H
+
+    MOV DL,CL
+    ADD DL,48
+    MOV AH,2
+    INT 21h
+
+    MOV AH,4CH
+    INT 21H
+
+    MAIN ENDP
+    END MAIN
